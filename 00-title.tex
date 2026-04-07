@@ -1,0 +1,83 @@
+% ============================================================
+%  Титульная страница + Содержание
+% ============================================================
+\hypertarget{toc}{}
+
+% Верхняя полоса — имитация строки статуса ED
+\begin{tcolorbox}[
+  colback=edorange, colframe=edorange, arc=0mm,
+  left=1mm, right=1mm, top=0.5mm, bottom=0.5mm,
+  boxrule=0pt,
+]
+{\color{edbg}\fontsize{5.5}{6}\selectfont\bfseries
+  КОМАНДИР~$\cdot$~ИССЛЕДОВАТЕЛЬ~$\cdot$~v2026}
+\end{tcolorbox}
+
+\vspace{2mm}
+
+% Главный заголовок
+\begin{center}
+  {\color{edgray}\fontsize{6}{7}\selectfont\MakeUppercase{Elite Dangerous}}\\[1mm]
+  {\color{edorange}\fontsize{13}{15}\selectfont\bfseries
+    \MakeUppercase{Справочник}}\\[0.5mm]
+  {\color{edorange}\fontsize{9}{11}\selectfont\bfseries
+    \MakeUppercase{исследователя}}\\[2mm]
+  {\color{edorangedim}\rule{40mm}{0.5pt}}\\[1.5mm]
+  {\color{edgraytext}\fontsize{6}{7}\selectfont
+    Материалы~$\cdot$~Инженеры~$\cdot$~Навигация~$\cdot$~Экзобиология}
+\end{center}
+
+\vspace{3mm}
+{\color{edorangedim}\rule{\linewidth}{0.3pt}}
+\vspace{2mm}
+
+% Содержание
+{\color{edorange}\fontsize{7}{8.5}\selectfont\bfseries
+  \MakeUppercase{Содержание}}
+
+\vspace{1.5mm}
+
+% TOC entries — стилизованный список
+\newcommand{\tocentry}[3]{%
+  \begin{tcolorbox}[
+    colback=edboxbg, colframe=edorangedim, arc=0mm,
+    left=2mm, right=1.5mm, top=0.8mm, bottom=0.8mm,
+    boxrule=0.2mm,
+    before skip=0.8mm, after skip=0mm,
+  ]
+  \hyperlink{#1}{%
+    {\color{edgray}\fontsize{6}{7}\selectfont\bfseries #2~~}%
+    {\color{edtext}\fontsize{7}{8.5}\selectfont #3}%
+  }
+  \end{tcolorbox}
+}
+
+\tocentry{ch01}{01}{Материалы}
+\tocentry{ch02}{02}{Инженеры}
+\tocentry{ch03}{03}{Модули и синтез}
+\tocentry{ch04}{04}{Навигация и фарм-локации}
+\tocentry{ch05}{05}{Экзобиология}
+
+\vspace{2mm}
+{\color{edorangedim}\rule{\linewidth}{0.3pt}}
+\vspace{1.5mm}
+
+% Слои
+\begin{tcolorbox}[
+  colback=edboxbg, colframe=edgray, arc=0mm,
+  left=1.5mm, right=1.5mm, top=1mm, bottom=1mm,
+  boxrule=0.2mm,
+]
+{\color{edgray}\fontsize{5.5}{7}\selectfont\bfseries\MakeUppercase{Управление слоями}}\\[0.5mm]
+{\color{edgraytext}\fontsize{5.5}{6.5}\selectfont
+  В файле \texttt{main.tex} замените \texttt{\textbackslash toggletrue} на
+  \texttt{\textbackslash togglefalse} чтобы скрыть раздел.}
+\end{tcolorbox}
+
+\vspace{1.5mm}
+
+% Версия / подпись
+\begin{center}
+{\color{edgray}\fontsize{5.5}{6.5}\selectfont
+  Версия 2026~$\cdot$~Fly safe, commanders!~\textbf{o7}}
+\end{center}
